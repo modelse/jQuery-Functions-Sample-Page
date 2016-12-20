@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta chartset="utf-8"/>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function (){
+
+        // Click
+        $('#btn1').click(function(){
+            console.log("we clicked the button");
+            alert('you clicked the button');
+        })
+
+        //  hide
+         $("#hide").click(function(){
+             console.log("here")
+             $("#hidesection").hide();
+         })
+
+        //  show
+         $("#show").click(function(){
+             $("#hidesection").show();
+         })
+
+        //  toggle
+            $("#toggle").click(function(){
+                $("#showsection").toggle();
+        })
+
+        // SlideUp
+        $("#slideup").click(function(){
+            $("#slideupsection").slideUp();
+        })
+
+        // SlideDown
+        $("#slidedown").click(function(){
+            $("#slideupsection").slideDown();
+        })
+
+        // Slide Toggle
+        $("#slidetoggle").click(function(){
+            $("#slidedownsection").slideToggle();
+        })
+
+        // FadeOut
+        $("#fadeout").click(function(){
+            $("#fadeoutsection").fadeOut();
+        })
+
+        // FadeIn
+        $("#fadein").click(function(){
+            $("#fadeoutsection").fadeIn();
+        })
+
+        // Add Class
+        $("#addclass").click(function(){
+            $( "#addclasssection").addClass("red");
+        })
+
+        // Before
+        $("#addbefore").click(function(){
+            $("#beforehere").before("BOOM!");
+        })
+
+        // After
+        $("#addafter").click(function(){
+            $("#afterhere").after("SHA-BOOM!");
+        })
+
+        // Append
+        $("#addappend").click(function(){
+            $("#appendhere").append(" Their trunks were down!");
+        })
+
+        // HTML
+        $("#html").click(function(){
+            $("#htmlsectiontitle").html("IT WILL NEVER END!!!");
+        })
+
+        // Attribute
+        $("#attribute").click(function(){
+            $("img").attr("width","500");
+        })
+
+        //  Val
+        $("#value").click(function(){
+            $("input:text").val("Eve Modelski");
+        })
+
+        // Text Section
+        $("#text").click(function(){
+            $("#textthis").text("Hello!");
+        })
+
+        // Data
+        $("#btn2").click(function(){
+            $("body").data("color", "Blue")
+            console.log($("body").data("color"));
+            alert($("body").data("color"));
+                 })
+    })
+    </script>
+</head>
+<style>
+.red{
+    color:red;
+}
+</style>
+<body>
+    <div class="jquery">
+
+        <!-- Click Section -->
+        <h1>Click</h1>
+        <h5> Click the button to see what happens when you click</h5>
+        <button id="btn1">Click Me</button>
+        <hr>
+
+        <!-- Hide Section -->
+        <div id="hidesection">
+        <h1>Hide</h1>
+        <h5>Hide this button!</h5>
+        <button id="hide">Hide this!</button>
+        </div>
+
+        <!-- Show Section -->
+        <div id="showsection">
+        <h1>Show</h1>
+        <h5>Show the Hide Section!</h5>
+        <button id="show">Show it again!</button>
+        </div>
+
+        <!-- Toggle Section -->
+        <div id="togglesection">
+        <h1>Toggle</h1>
+        <h5>Make the Show Section Toggle!</h5>
+        <button id="toggle">TOGGLE!</button>
+        </div>
+
+        <!-- Slide Up -->
+        <div id="slideupsection">
+        <h1>Slide Up</h1>
+        <h5>Slide this section up out of view</h5>
+        <button id="slideup">Slide it up!</button>
+        </div>
+
+        <!-- Slide Down -->
+        <div id="slidedownsection">
+        <h1>Slide Down</h1>
+        <h5>Slide the Up Section back down into view</h5>
+        <button id="slidedown">Slide it down!</button>
+        </div>
+
+        <!-- Slide Toggle -->
+        <div id="slidetogglesection">
+        <h1>Slide Toggle</h1>
+        <h5>Slide toggle the Slide Down Section</h5>
+        <button id="slidetoggle">Slide Toggle!</button>
+        </div>
+
+        <!-- Fade Out -->
+        <div id="fadeoutsection">
+        <h1>Fade Out</h1>
+        <h5>Fade this section Out!</h5>
+        <button id="fadeout">Fade Out!</button>
+        </div>
+
+        <!-- Fade back In -->
+        <div id="fadeinsection">
+        <h1>Fade In</h1>
+        <h5>Fade the Out Section back in!</h5>
+        <button id="fadein">Fade In!</button>
+        </div>
+
+        <!-- Add Class -->
+        <div id="addclasssection">
+        <h1>Add Class!</h1>
+        <h5> add the color red to this text</h5>
+        <button id="addclass">Make it red!</button>
+        </div>
+
+        <!-- Before Section -->
+        <div id="addbeforesection">
+        <h1>Add Before!</h1>
+        <h5 id="beforehere">Add text before this line.</h5>
+        <button id="addbefore">Add BOOM!</button>
+        </div>
+
+        <!-- After Section -->
+        <div id="addaftersection">
+        <h1>Add After!</h1>
+        <h5 id="afterhere">Add text after this line.</h5>
+        <button id="addafter">Add SHA-BOOM!</button>
+        </div>
+
+        <!-- Append Section -->
+        <div id="addappendsection">
+        <h1>Append This!</h1>
+        <h5 id="appendhere">Why were the elephants kicked off the beach?</h5>
+        <button id="addappend">Give me the Answer!</button>
+        </div>
+
+        <!-- Html section -->
+        <div id="htmlsection">
+            <h1 id="htmlsectiontitle">HTML</h1>
+            <h5>Will it ever end?!</h5>
+            <input id="htmlstuff" type="text" name="name" value="">
+            <button id="html">Change My Section title!</button>
+        </div>
+
+        <!-- Attribute section -->
+        <div id="attributesection">
+            <h1 id=>Attribute</h1>
+            <h5>Change the Size of this picture</h5>
+            <img src="cutekitty.jpg" alt="adorable Kitty Picture" width=300px height=300px>
+            <button id="attribute">Width 500px!</button>
+        </div>
+
+        <!-- Val Section -->
+        <h1>Val</h1>
+        <h5>Insert Value</h5>
+        <input id="addvalue" type="text" Name="name" value="">
+        <button id="value">Give me the name!</button>
+
+
+        <!-- Text Section -->
+        <div id="textsection">
+        <h1>Text</h1>
+        <h5 id="textthis">Change this please.</h5>
+        <input id="textstuff" type="text" name="name" value="">
+        <button id="text">Hello?</button>
+        </div>
+
+        <!-- Data Section -->
+        <h1>Data</h1>
+        <h5>Store data when clicking data</h5>
+        <input id="datastuff" type="text" name="name" value="">
+        <button id="btn2">Click me for Data!</button>
+    </div>
+
+</html>
